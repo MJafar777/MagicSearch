@@ -10,8 +10,7 @@ class SearchBar extends React.Component {
     event.preventDefault();
     this.setState({ kalitSoz: event.target.value });
   };
-  onFormSubmit = (e) => {
-    console.log(this.state.kalitSoz);
+  onFormSubmit = async (e) => {
     e.preventDefault();
     this.props.malumotniOl(this.state.kalitSoz);
   };

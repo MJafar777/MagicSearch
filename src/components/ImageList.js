@@ -1,26 +1,15 @@
 import React from "react";
+import "./StyleImage.css";
+import ImageCard from "./ImageCard";
 
-class ImageList extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-  funcIshla = (event) => {
-    event.preventDefault();
-    this.props.getData(event);
-    console.log("hello");
+const ImageList = (props) => {
+  const imageRender = () => {
+    return props.getData.map((val) => {
+      return <ImageCard data={val} key={val.id} />;
+    });
   };
 
-  render() {
-    return (
-      <div className="containerCard">
-        <div className="card">
-          <img src="" alt=""/>
-        </div>
-      </div>
-    );
-  }
-}
+  return <div className="img__List">{imageRender()}</div>;
+};
 
 export default ImageList;
