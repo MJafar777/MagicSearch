@@ -10,7 +10,7 @@ function Buttons(props) {
   return (
     <div className="buttons">
       <button onClick={orqaga} className="prev_btn positive ui button">
-        Prev
+        Previous
       </button>
       <button onClick={oldinga} className="next_btn negative ui button">
         Next
